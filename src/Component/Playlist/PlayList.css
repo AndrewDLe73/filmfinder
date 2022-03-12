@@ -1,0 +1,17 @@
+.playListContainer{
+    height: 100%;
+    width: 100%;
+    flex-flow: row nowrap;
+    overflow: auto;
+    display: flex;
+    position: fixed;
+    overflow: visible;
+    align-items: flex-start;
+    justify-content: flex-start;
+    box-sizing: border-box;
+}
+
+.playListContainer:not(:hover) + .playItem{
+    visibility: hidden;
+}
+

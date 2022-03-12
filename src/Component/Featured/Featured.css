@@ -1,0 +1,76 @@
+.featured{
+    height: 90vh;
+    position: relative;
+}
+
+.category{
+    position:absolute;
+    top: 80px;
+    left: 50px;
+    font-size: 30px;
+    font-weight: 500;
+    color: white;
+    display: flex;
+    align-items: center;
+    
+}
+
+.category select{
+    cursor: pointer;
+    color: white;
+    background-color: var(--main-color);
+    margin-left: 20px;
+    padding:5px;
+}
+
+.featured img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.featured .info {
+    width: 35%;
+    position: absolute;
+    left: 50px;
+    bottom: 100px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+
+}
+
+div.featured div.info img {
+    background-color: transparent;
+    width: 100%;
+    height: auto;
+}
+
+.buttons {
+    display: flex;
+}
+
+.buttons button{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px; 
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 18px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.play {
+    color: var(--main-color);
+    background-color:white;
+
+}
+button.more{
+    background-color:gray;
+    color: white;
+}
+button span{
+    margin-left: 5px
+}

@@ -1,0 +1,115 @@
+.layout_container{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #0b0b0b;
+    overflow-x: hidden;
+    transform-style: preserve-3d;
+    color: white;
+    
+
+}
+
+.main{
+    position: relative;
+    z-index: 5;
+    overflow: hidden;
+    transform-origin: left;
+    transform-style: preserve-3d;
+    transition: all .5s ease-in-out;
+}
+
+.main .content{
+    min-height: 100vh;
+    position: relative;
+}
+
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(43,51,59,.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.layout_container.active .main{
+    animation: main-animation .5s ease-in-out;
+    cursor: pointer;
+    transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
+
+}
+
+@keyframes main-animation {
+    from {
+        transform: rotate(0);
+
+    }
+    to {
+        transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
+    }
+}
+
+
+/* 
+.main-container::before, 
+.main-container::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform-style: preserve-3d;
+    transform-style: left;
+    transition: 0.5s ease-in-out;
+    background: #fff;
+
+}
+
+.main-container::before{
+    z-index: -1;
+    opacity: 0.15;
+}
+.main-container::after{
+    z-index: -2;
+    opacity: .1;
+}
+
+.layout_container.active .main-container::before{
+    animation: main-before 0.6 ease-out;
+    transform: perspective(1300px) rotateY(20deg) translateZ(215px) scale(0.5);
+
+}
+
+@keyframes main-before{
+    0%{
+        transform: translate(0);
+    }
+    5% {
+        transform: perspective(1300px) rotateY(20deg) translateZ(300px) scale(0.5);
+    }
+    100%{
+        transform: perspective(1300px) rotateY(20deg) translateZ(215px) scale(0.5);
+    }
+}
+
+.layout_container.active .main-container::after{
+    animation: main-after .06 ease-out;
+    transform: perspective(1300px) rotateY(20deg) translateZ(120px) scale(0.5)
+}
+@keyframes main-after{
+    0%{
+        transform: translate(0);
+    }
+    20% {
+        transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
+    }
+    100%{
+        transform: perspective(1300px) rotateY(20deg) translateZ(120px) scale(0.5);
+    }
+} */

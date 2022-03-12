@@ -1,0 +1,42 @@
+.planning {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.resultsList{
+    margin-top: 1em;
+
+}
+
+.title{
+    position: fixed;
+    top:2em;
+}
+.playlistcontainer{
+    position: absolute;
+    display: flex;
+    flex-flow:row;
+    height:1em;
+    width:100%;
+    background-color: rgb(27, 27, 27);
+    border-radius: 1rem;
+    left: 50;
+    bottom:0;
+    transition: all .3s ease-out;
+}
+.playlistcontainer:hover{
+    height:9em;
+    position: absolute;
+    left: 50;
+    bottom:0em;
+}
+
+.playlistcontainer.grabbing{
+    height:10em;
+    position: absolute;
+    display: flex;
+    left: 50;
+    bottom:0em;
+}

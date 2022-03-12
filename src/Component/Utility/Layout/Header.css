@@ -1,0 +1,66 @@
+.header{
+    position: fixed;
+    justify-content: center;
+    padding-left: 3rem;
+    padding-top: 2rem;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    height: 5rem;
+
+}
+.logo img{
+    height:5rem
+}
+
+
+
+.header__content{
+    max-width: 1120px;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.logo{
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.menu-toggle{
+    --size: 5rem;
+    width: var(--size);
+    height: var(--size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50;
+    cursor: pointer;
+
+}
+
+.menu_icon{
+    position: absolute;
+    transition: all .3s ease-in-out;
+}
+
+.close_ {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.menu-toggle.active .close_{
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu-toggle.active .menu_{
+    opacity: 0;
+    visibility: hidden;
+}

@@ -8,11 +8,11 @@ const PlaylistCurrent = ({ currentList, handleGrab, itemDrop, handleCurrentList,
     }
 
 
-    function handleDrop(ev) {
-        const droppedItem = ev.dataTransfer.getData("drag-item");
-        console.log(droppedItem)
-        handleDelete(droppedItem)
-    }
+    // function handleDrop(ev) {
+    //     const droppedItem = ev.dataTransfer.getData("drag-item");
+    //     console.log(droppedItem)
+    //     handleDelete(droppedItem)
+    // }
 
     const renderFunction = currentList.map((item) => {
 

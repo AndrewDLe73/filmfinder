@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/github.io/filmfinder/static/css/main.91c32292.css",
+    "main.js": "/github.io/filmfinder/static/js/main.2c04c195.js",
+    "static/media/YoungLove.png": "/github.io/filmfinder/static/media/YoungLove.da9f406b69e7f7be6851.png",
+    "static/media/logo.png": "/github.io/filmfinder/static/media/logo.31ca314484326d10de1b.png",
+    "index.html": "/github.io/filmfinder/index.html",
+    "main.91c32292.css.map": "/github.io/filmfinder/static/css/main.91c32292.css.map",
+    "main.2c04c195.js.map": "/github.io/filmfinder/static/js/main.2c04c195.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.91c32292.css",
+    "static/js/main.2c04c195.js"
+  ]
+}

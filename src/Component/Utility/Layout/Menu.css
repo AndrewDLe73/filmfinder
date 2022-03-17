@@ -39,10 +39,65 @@
     transition: 0.3s ease-in-out;
 
 }
+
 .menu ul:hover{
-    padding-left: 3rem;
+  margin-left:2rem;
+  font-size: 50px;
 }
 
-.menu ul:hover::before{
-    width:15px;
+.eachmenu:before, .eachmenu:after {
+		display: block;
+		content: attr(dataglitch);
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		opacity: .8;
+	} 
+.eachmenu:after {
+		color: #f0f;
+		z-index: -2;
+	} 
+.eachmenu:before {
+		color: #0ff;
+		z-index: -1;
+	}
+.eachmenu:hover:before {
+			animation: glitch .3s cubic-bezier(.1, .11, .2, .6) infinite
+		}
+.eachmenu:hover:after {
+			animation: glitch .3s cubic-bezier(.1, .12, .3, .1) infinite
+		}
+.eachmenu:hover:before {
+			animation: glitch .3s cubic-bezier(.1, .15, .1, .1) reverse infinite
+		}
+
+
+
+
+
+@keyframes glitch {
+	0% {
+		transform: translate(0)
+	}
+	20% {
+		transform: translate(-1px, 2px)
+	}
+	40% {
+		transform: translate(-3px, -6px)
+	}
+	60% {
+		transform: translate(2px, 5px)
+	}
+	80% {
+		transform: translate(5px, -1px)
+	}
+	to {
+		transform: translate(0)
+	}
 }
+
+
+
+

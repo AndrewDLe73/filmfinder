@@ -81,11 +81,11 @@ const MovieList = (props) => {
             <span className="listTitle">{props.genre}</span>
             <div className="wrapper">
                 <ArrowBackIosIcon className="sliderArrow left" onClick={() => handleClick("left")} style={{ display: (isMoved ? "" : "none") }} />
-                <div className="container" ref={listRef}>
+                <div className="listcontainer" ref={listRef}>
                     {loading ? "loading" : renderListItems(movieList)}
 
                 </div>
-                <ArrowForwardIosIcon className="sliderArrow right" onClick={() => handleClick("right")} />
+                <ArrowForwardIosIcon className="sliderArrow rightarrow" onClick={() => handleClick("right")} />
             </div>
         </div>)
 }

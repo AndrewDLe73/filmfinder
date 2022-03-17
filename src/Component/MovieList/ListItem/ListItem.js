@@ -1,12 +1,13 @@
 import { PlayArrow, Add, ThumbDownOutlined, ThumbUpOutlined } from '@mui/icons-material';
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 import "./ListItem.css"
-import axios from 'axios'
-
 const ListItem = ({ data }) => {
     console.log('listItem:', data)
     if (!data) return null;
+
+
 
 
     return (
@@ -21,20 +22,15 @@ const ListItem = ({ data }) => {
             </div>
             <div className="desc">
                 <h3>{data.name}</h3>
+
                 <span>
                     <div dangerouslySetInnerHTML={{ __html: data.summary }} />
 
                 </span>
             </div>
-            {/* <div className="icons">
-                < PlayArrow />
-                < Add />
-                <ThumbDownOutlined />
-                <ThumbUpOutlined />
-            </div> */}
             <div className="adventure"> {data.genres[0]}
             </div>
-        </div>
+        </div >
     )
 }
 

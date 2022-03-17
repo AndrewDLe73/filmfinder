@@ -43,10 +43,7 @@ const Featured = ({ type }) => {
                         <PlayArrowIcon />
                         <span>Play</span>
                     </button>
-                    <button className="more">
-                        <InfoIcon />
-                        <span>Info</span>
-                    </button>
+
 
                 </div>
             </div>

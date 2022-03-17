@@ -1,6 +1,9 @@
 .featured{
-    height: 90vh;
+    height: 80vh;
+    width:110%;
+    background-color: black;
     position: relative;
+    overflow: hidden;
 }
 
 .category{
@@ -31,9 +34,12 @@
 
 .featured .info {
     width: 35%;
+    height: 40%;
+    max-height: 50%;
     position: absolute;
     left: 50px;
     bottom: 100px;
+    text-size-adjust: auto;
     color: white;
     display: flex;
     flex-direction: column;

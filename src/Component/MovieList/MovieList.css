@@ -1,6 +1,7 @@
 .list{
     width: 100%;
-    margin-top: 10px;
+    margin-top: 1em;
+    height:10rem;
 
 }
 
@@ -11,7 +12,7 @@
     margin-left: 50px;
 }
 
-.wrapper .container{
+.wrapper .listcontainer{
     display: flex;
     margin-left: 20px;
     width: max-content;
@@ -22,7 +23,7 @@
 
 .wrapper{
     position: relative;
-    margin-top: 2rem;
+    margin-top: 1rem;
     margin-bottom: 2rem;
 }
 
@@ -42,6 +43,6 @@
     left: 0;
 }
 
-.right{
+.rightarrow{
     right: 0;
 }

@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import { useLocation } from 'react-router-dom';
 import VideoSearch from '../../Component/VideoSearch/VideoSearch'
 import VideoList from '../../Component/VideoSearch/VideoList'
 import './Planner.css';
@@ -216,10 +217,14 @@ const object = [
 const Planner = (props) => {
 
 
+
+
     const [searchTerm, setSearchTerm] = useState('');
     const [resultsList, setResultsList] = useState([]);
     const [debouncedSearch, setDebouncedSearch] = useState(searchTerm);
     const [searching, setSearching] = useState(false);
+
+
 
 
     const [grab, setGrab] = useState(false);
@@ -264,7 +269,7 @@ const Planner = (props) => {
         const tempitem = resultsList.splice(index, 1);
         console.log(tempitem);
         setResultsList([...resultsList]);
-        props.handleCurrentList(tempitem);
+        props.handleCurrentList(tempitem, 1);
     }
 
     const renderHelper = (

@@ -16,19 +16,19 @@ const Menu = ({ active, handleActive }) => {
     return (
         <ul className={`menu ${active ? 'active' : ''} `}>
             <ul>
-                <Link to='/'> Home </Link>
+                <Link className="eachmenu" dataglitch="Home" to='/'> Home </Link>
             </ul>
             <ul>
-                <Link to="/planner"> Planner</Link>
+                <Link className="eachmenu" dataglitch="Planner" to="/planner"> Planner</Link>
             </ul>
             <ul>
-                <Link to='/settings'> Settings</Link>
+                <Link className="eachmenu" dataglitch="Settings" to='/settings'> Settings</Link>
             </ul>
             <ul>
-                <Link to='/explore'> Explore</Link>
+                <Link className="eachmenu" dataglitch="Explore" to='/explore'> Explore</Link>
             </ul>
             <ul>
-                <Link to='/current'> Continue Watching</Link>
+                <Link className="eachmenu" dataglitch="Continue Watching" to='/current'> Continue Watching</Link>
             </ul>
         </ul>
     )

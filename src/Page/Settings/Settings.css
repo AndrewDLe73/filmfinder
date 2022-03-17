@@ -1,0 +1,95 @@
+.settingsPageContainer{
+background-color: #121212;
+height: 80vh;
+width: 100vw;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.settingsBox{
+    background-color: #1C1C1C;
+    height: 40em;
+    width: 40em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20%;
+    flex-direction: column;
+-webkit-box-shadow: -3px 8px 6px 6px rgba(0,0,0,0.67); 
+box-shadow: -3px 8px 6px 6px rgba(0,0,0,0.67);
+
+}
+
+.settingsButton{
+height: 6em;
+width: 6em;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+border-radius: 100%;
+background-color: #8b6059;
+transition: all .2s ease-out;
+}
+.settingsButton.on{
+height: 8em;
+width: 8em;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+border-radius: 100%;
+background-color: #596778;
+}
+
+.showSettings{
+    opacity: 0;
+    display: flex;
+    transform: translateY(1rem) rotateZ(-80deg)scale(0);
+    transition: all .5s ease-out
+ }
+.showSettings.on{
+    align-items: center;
+justify-content: center;
+flex-direction: column;
+    opacity: 1;
+    transform: translateY(0rem) rotateZ(0deg)scale(1.2);
+    transition: all .5s ease-out
+}
+
+
+.autoPlayButton{
+opacity: 1;
+height: 4em;
+width: 4em;
+display: flex;
+align-items: center;
+justify-content: center;
+padding-right: .5em;
+flex-direction: column;
+border-radius: 100%;
+background-color: #2a632f;
+
+border-color:#2a632f;
+position: absolute;
+transform: translateY(-12rem) rotateZ(0)scale(1.2);
+transition: all .2s ease-in-out;
+}
+.autoPlayButton.off{
+background-color: #bd4825;
+border-color: #bd4825;
+align-items: center;
+justify-content: center;
+opacity: 1
+}
+.autoPlayButton.on{
+transform: translateY(-12rem) rotateZ(360deg) scale(1); 
+opacity: 1;
+}
+
+.settingsTitle{
+    display: flex;
+    position:relative;
+    bottom: 0;
+}

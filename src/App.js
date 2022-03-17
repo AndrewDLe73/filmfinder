@@ -52,17 +52,27 @@ const App = () => {
   const [selectedVideo, setSelectedVideo] = useState(null);
   const [currentList, setCurrentList] = useState([testitem]);
 
+  // This handles the options page
+  const [autoPlay, setAutoPlay] = useState(true);
+  const handleAutoPlay = () => {
+    setAutoPlay(!autoPlay)
+
+  }
+
   const onVideoSubmit = (data) => {
     console.log(data);
     setSelectedVideo(data);
-    setCurrentList([...currentList, data]);
-    console.log(currentList);
-    console.log(selectedVideo);
   }
 
-  const handleCurrentList = (tempitem) => {
+  const handleCurrentList = (tempitem, numx = 1) => {
     const currentUpdate = currentList.concat(tempitem);
     setCurrentList(currentUpdate);
+
+    if (numx === 2) {
+
+      console.log(tempitem);
+      setCurrentList(tempitem);
+    }
   }
 
 
@@ -71,16 +81,16 @@ const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<MainLayout />} >
+        <Route path="/" element={<MainLayout />} >np
           <Route index element={<Home />} />
-          <Route path='settings' element={<Settings />} />
+          <Route path='settings' element={<Settings autoPlay={autoPlay} handleAutoPlay={handleAutoPlay} />} />
           <Route path='planner' element={
             <Planner currentList={currentList}
               onVideoSubmit={onVideoSubmit} selectedVideo={selectedVideo}
               setSelectedVideo={setSelectedVideo} handleCurrentList={handleCurrentList} />}
           />
           <Route path='explore' index element={<Explore />} />
-          <Route path='current' index element={<Current selectedVideo={selectedVideo} currentList={currentList} />} />
+          <Route path='current' index element={<Current autoPlay={autoPlay} onVideoSubmit={onVideoSubmit} selectedVideo={selectedVideo} currentList={currentList} handleCurrentList={handleCurrentList} />} />
         </Route>
       </Routes>
     </BrowserRouter >

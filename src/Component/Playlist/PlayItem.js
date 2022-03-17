@@ -1,7 +1,12 @@
-import React from 'react'
+import { ArrowDropUp } from '@mui/icons-material';
+import { ArrowDropDown } from '@mui/icons-material';
+
+import React, { useState } from 'react'
 import "./PlayItem.css"
 
 const PlayItem = ({ data, onVideoSubmit, handleGrab }) => {
+
+
 
     const handleDragStart = () => {
         handleGrab(1, data);
@@ -23,10 +28,12 @@ const PlayItem = ({ data, onVideoSubmit, handleGrab }) => {
                 <h4 className="titleTop">
                     {data.snippet.title}
                 </h4>
-                <div className="videocontent">
-                    <div>
-                        <img src={data.snippet.thumbnails.medium.url} alt='' />
-                    </div>
+                <div className="videocontentcurrent">
+
+                    <img src={data.snippet.thumbnails.medium.url} alt='' />
+
+
+
                     <div>
                         <p className="description">{data.snippet.description}</p>
                     </div>

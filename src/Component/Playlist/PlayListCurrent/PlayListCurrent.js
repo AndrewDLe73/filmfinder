@@ -1,11 +1,9 @@
 import React from 'react'
 import PlayCurrentItem from './PlayCurrentItem';
+import "./PlayListCurrent.css"
 
 const PlaylistCurrent = ({ currentList, handleGrab, itemDrop, handleCurrentList, handleDelete }) => {
 
-    if (!currentList) {
-        return <div>hello</div>
-    }
 
 
     // function handleDrop(ev) {
@@ -14,17 +12,15 @@ const PlaylistCurrent = ({ currentList, handleGrab, itemDrop, handleCurrentList,
     //     handleDelete(droppedItem)
     // }
 
-    const renderFunction = currentList.map((item) => {
-
-        return < PlayCurrentItem
-            key={item.id.videoId} data={item} handleGrab={handleGrab}
-        />
-
+    const renderFunction = currentList.map((item, index) => {
+        return <PlayCurrentItem className="playItemCurrent"
+            key={item.id.videoId} data={item}
+            handleGrab={handleGrab} index={index} />
     })
 
 
     return (
-        <div>YourPlayList
+        <div className="currentCard">
             {renderFunction}
         </div>
     )

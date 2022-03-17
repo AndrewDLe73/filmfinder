@@ -1,7 +1,9 @@
+.explorePage{
+    height:80%;
+width: 100%}
 .home{
     background-color: var(--main-color);
-    height: 80%;
-
+    height: max-content;
     overflow: hidden;
 
 }

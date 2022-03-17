@@ -1,8 +1,9 @@
 import React from 'react'
+import Featured from "../../Component/Featured/Featured"
 
 const Home = () => {
     return (
-        <h1>Home</h1>
+        <Featured />
     )
 }
 
